@@ -88,6 +88,7 @@ function changeHeaderWhenScroll() {
     }
   }
 }
+
 /*menu ativo conforme a sessão visivel na pagina*/
 const sections = document.querySelectorAll('main section[id]')
 function activateMenuAtCurrentSection() {
@@ -112,6 +113,8 @@ function activateMenuAtCurrentSection() {
     }
   }
 }
+
+/*correção da cor do menu ativo*/
 
 /* Botão voltar para o topo*/
 function backToTopButton() {

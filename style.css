@@ -594,10 +594,14 @@ footer .social a:hover {
     background: var(--body-color);
   }
 
-  nav .menu ul li a.title.active {
+  nav .menu ul li a.title::after {
     color: var(--body-color);
     font-weight: bold;
     -webkit-font-smoothing: auto;
+  }
+
+  nav .menu ul li a.active.scroll {
+    color: var(--body-color);
   }
 
   nav .icon-menu {
@@ -671,11 +675,76 @@ footer .social a:hover {
     font-size: 2.25rem;
   }
 }
-/*large devices: 1023 > */ /*large devices: 992 > */
+/*large devices: 1023 > */
 @media (min-width: 1023px) {
   :root {
     --title-font-size: 2.25rem;
     --subtitle-font-size: 1.125rem;
   }
+  .container {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /*menu*/
+  nav .menu {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+  }
+
+  nav .menu ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  nav .menu ul li a.title {
+    font: 400 1rem var(--body-font);
+    -webkit-font-smoothing: antialiased;
+  }
+  nav ul li a.scroll:hover {
+    color: var(--body-color);
+  }
+
+  nav ul li a.scroll::after {
+    background: var(--body-color);
+  }
+
+  nav .menu ul li a.title::after {
+    color: var(--body-color);
+    font-weight: bold;
+    -webkit-font-smoothing: auto;
+  }
+
+  nav .menu ul li a.active.scroll {
+    color: var(--body-color);
+  }
+  nav .icon-menu {
+    display: none;
+  }
+
+  /*home*/
+  #home .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  #home .image {
+    order: 0;
+  }
+
+  #home .text {
+    order: 1;
+    max-width: 24rem;
+    text-align: right;
+  }
+
+  /*about*/
+  #about .container {
+    grid-auto-flow: column;
+    margin: 0 auto;
+  }
 }
+/*large devices: 992 > */
+
 /*medium devices: 767 > */
